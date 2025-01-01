@@ -1,7 +1,10 @@
 extends Node
 class_name State
 
-func entre() -> void:
+
+var player
+
+func enter() -> void:
 	pass
 
 func exit() -> void:

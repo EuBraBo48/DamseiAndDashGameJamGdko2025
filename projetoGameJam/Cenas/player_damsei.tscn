@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8oq5oio1eqkm"]
+
+[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_6delg"]
+[ext_resource type="Script" path="res://Scrips/player_damsei.gd" id="1_ritdw"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/StateMachine.gd" id="2_akvf6"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/stateDamsei/ide.gd" id="3_wb2ry"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/stateDamsei/rum.gd" id="4_e6lch"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/stateDamsei/interagir.gd" id="5_5eokn"]
+
+[node name="PlayerDamsei" type="CharacterBody2D" node_paths=PackedStringArray("_state_machine")]
+script = ExtResource("1_ritdw")
+_state_machine = NodePath("stateMachine")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+
+[node name="sprit" type="Sprite2D" parent="."]
+position = Vector2(-7, -4)
+scale = Vector2(0.5, 0.578125)
+texture = ExtResource("1_6delg")
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+
+[node name="stateMachine" type="Node" parent="." node_paths=PackedStringArray("stateInicial")]
+script = ExtResource("2_akvf6")
+stateInicial = NodePath("ide")
+
+[node name="ide" type="Node" parent="stateMachine"]
+script = ExtResource("3_wb2ry")
+
+[node name="rum" type="Node" parent="stateMachine"]
+script = ExtResource("4_e6lch")
+
+[node name="interagir" type="Node" parent="stateMachine"]
+script = ExtResource("5_5eokn")

@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://76tv5iy83y3o"]
+
+[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_uuhap"]
+[ext_resource type="Script" path="res://Scrips/draggable.gd" id="2_gcj3r"]
+[ext_resource type="Script" path="res://Scrips/slot.gd" id="3_y5n4v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tsx1h"]
+atlas = ExtResource("1_uuhap")
+
+[node name="miniGameDoIDashGeladeira" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="drop" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 128.0
+offset_bottom = 128.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_tsx1h")
+script = ExtResource("2_gcj3r")
+
+[node name="slot" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 14.0
+offset_right = 467.0
+offset_bottom = 142.0
+scale = Vector2(0.9, 0.9)
+texture = SubResource("AtlasTexture_tsx1h")
+script = ExtResource("3_y5n4v")
+
+[node name="drop2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 124.0
+offset_right = 123.0
+offset_bottom = 252.0
+scale = Vector2(0.8, 0.8)
+texture = SubResource("AtlasTexture_tsx1h")
+script = ExtResource("2_gcj3r")
+powerup = 1
+
+[node name="slot2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 138.0
+offset_right = 462.0
+offset_bottom = 266.0
+scale = Vector2(0.9, 0.9)
+texture = SubResource("AtlasTexture_tsx1h")
+script = ExtResource("3_y5n4v")
+powerup = 1

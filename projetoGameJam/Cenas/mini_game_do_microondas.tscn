@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmll8wn80xget"]
+
+[ext_resource type="Script" path="res://Scrips/mini_game_do_microondas.gd" id="1_0ot53"]
+[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_pt2bb"]
+
+[node name="miniGameDoMicroondas" type="Control" node_paths=PackedStringArray("barraDevidaTextrura")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ot53")
+barraDevidaTextrura = NodePath("barraDeVida")
+
+[node name="fundo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = 4.0
+offset_right = -8.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 0.027451, 1, 1)
+
+[node name="barraDeVida" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 189.0
+offset_top = 15.0
+offset_right = 277.0
+offset_bottom = 42.0
+value = 100.0
+
+[node name="butaoCliquer" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 181.0
+offset_top = 60.0
+offset_right = 309.0
+offset_bottom = 188.0
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("1_pt2bb")
+
+[connection signal="pressed" from="butaoCliquer" to="." method="_on_texture_button_pressed"]

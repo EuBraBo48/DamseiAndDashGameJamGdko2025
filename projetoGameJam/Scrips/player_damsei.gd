@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name  dash
+class_name  damsei
 
 var seepd: float = 60
 @export var sprite__player: Sprite2D 

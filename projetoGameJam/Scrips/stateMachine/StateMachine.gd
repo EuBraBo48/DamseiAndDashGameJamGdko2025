@@ -12,7 +12,7 @@ func  stateMacne(player) -> void:
 	
 	if  stateInicial:
 		_stateAtual = stateInicial	
-		_stateAtual.enter()
+		_stateAtual.enter() 
 
 
 func  _process(delta: float) -> void:

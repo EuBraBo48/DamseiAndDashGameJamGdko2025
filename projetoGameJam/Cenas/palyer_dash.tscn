@@ -10,8 +10,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_xmbdh"]
 radius = 6.0
 
-[node name="palyerDash" type="CharacterBody2D"]
+[node name="palyerDash" type="CharacterBody2D" node_paths=PackedStringArray("_state_machine")]
 script = ExtResource("1_8imaq")
+_state_machine = NodePath("StateMachine")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_xmbdh")
@@ -23,14 +24,15 @@ texture = ExtResource("1_3htuy")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
 
-[node name="stateMachine" type="Node" parent="."]
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("stateInicial")]
 script = ExtResource("3_r8k0t")
+stateInicial = NodePath("Ide")
 
-[node name="Ide" type="Node" parent="stateMachine"]
+[node name="Ide" type="Node" parent="StateMachine"]
 script = ExtResource("4_fc45i")
 
-[node name="rum" type="Node" parent="stateMachine"]
+[node name="rum" type="Node" parent="StateMachine"]
 script = ExtResource("5_xkyyf")
 
-[node name="interagindo" type="Node" parent="stateMachine"]
+[node name="interagindo" type="Node" parent="StateMachine"]
 script = ExtResource("6_f2060")

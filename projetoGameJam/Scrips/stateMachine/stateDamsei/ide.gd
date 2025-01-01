@@ -1,5 +1,5 @@
 extends State
-class_name Ide
+class_name IdeDamsi
 
 
 func enter() -> void:
