@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scrips/dialog.gd" id="1_gjo5y"]
 
-[node name="Dialog" type="Control"]
+[node name="Dialog" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_icone")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -10,6 +10,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gjo5y")
+_name = NodePath("name")
+_dialog = NodePath("Dialog")
+_icone = NodePath("icone")
 
 [node name="brackGraude" type="ColorRect" parent="."]
 layout_mode = 1

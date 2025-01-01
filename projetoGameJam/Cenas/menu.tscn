@@ -1,0 +1,319 @@
+[gd_scene load_steps=19 format=3 uid="uid://dllar88mbeg6w"]
+
+[ext_resource type="Script" path="res://Scrips/menu.gd" id="1_j61kg"]
+[ext_resource type="FontFile" uid="uid://chhvbl048066d" path="res://fontes/Cave-Story.ttf" id="2_viwet"]
+[ext_resource type="FontFile" uid="uid://baogvfjry2yc0" path="res://fontes/EquipmentPro.otf" id="5_tnlkl"]
+[ext_resource type="FontFile" uid="uid://byeucmyge7xj7" path="res://fontes/MatchupPro.otf" id="6_hk61s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_on1p5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xwqj2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_svj7h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkg6l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_beeth"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3mjmv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bev3i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hr3ay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3oc2x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kkr8m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cwwy4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ynlo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bh68d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a2hcb"]
+
+[node name="Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j61kg")
+
+[node name="fundo" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.32549, 0.32549, 0.32549, 0.376471)
+
+[node name="menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icone" type="Sprite2D" parent="menu"]
+position = Vector2(39, 35.5)
+scale = Vector2(1.41016, 0.730469)
+
+[node name="new game" type="Button" parent="menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.678431, 1, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_on1p5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xwqj2")
+text = "new game"
+
+[node name="opctions" type="Button" parent="menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.678431, 1, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_on1p5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xwqj2")
+text = "opctions"
+
+[node name="Exit" type="Button" parent="menu"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0, 0.678431, 1, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_on1p5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xwqj2")
+text = "Exit"
+
+[node name="opcions" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="opcions" type="VBoxContainer" parent="opcions"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="video" type="Button" parent="opcions/opcions"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.554387, 0.698667, 0.996563, 1)
+theme_override_colors/font_hover_color = Color(0.0075082, 0.231463, 0.988736, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_svj7h")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_mkg6l")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_beeth")
+text = "video"
+
+[node name="Creditos" type="Button" parent="opcions/opcions"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.554387, 0.698667, 0.996563, 1)
+theme_override_colors/font_hover_color = Color(0.0075082, 0.231463, 0.988736, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3mjmv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bev3i")
+text = "Credito"
+
+[node name="BackFromOpctions" type="Button" parent="opcions"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(0.554387, 0.698667, 0.996563, 1)
+theme_override_colors/font_hover_color = Color(0.0075082, 0.231463, 0.988736, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hr3ay")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3oc2x")
+text = "Back"
+
+[node name="video" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="video" type="HBoxContainer" parent="video"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -26.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lebels" type="VBoxContainer" parent="video/video"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="FullScreen" type="Label" parent="video/video/lebels"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+text = "FullScreen"
+
+[node name="Borderless" type="Label" parent="video/video/lebels"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_viwet")
+text = "Borderless"
+
+[node name="checkBoxs" type="VBoxContainer" parent="video/video"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="FullScreen" type="CheckBox" parent="video/video/checkBoxs"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 2
+theme_override_fonts/font = ExtResource("5_tnlkl")
+theme_override_font_sizes/font_size = 90
+
+[node name="Borderless" type="CheckBox" parent="video/video/checkBoxs"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 90
+
+[node name="BackFromVIdo" type="Button" parent="video"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kkr8m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_cwwy4")
+text = "Back"
+
+[node name="creditos" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabelaDoDia" type="Sprite2D" parent="creditos"]
+position = Vector2(183, 79)
+scale = Vector2(4.14063, 4.02632)
+
+[node name="BackFromCreditos" type="Button" parent="creditos"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -8.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_viwet")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_3ynlo")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_bh68d")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_a2hcb")
+text = "Back"
+
+[node name="Label" type="Label" parent="creditos"]
+layout_mode = 0
+offset_left = 122.0
+offset_top = 29.0
+offset_right = 256.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("5_tnlkl")
+text = "Progamdor: EuBrabo48
+artist: Geloze"
+
+[node name="Label3" type="Label" parent="creditos"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 7.0
+offset_right = 309.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_tnlkl")
+text = "Crédito
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="creditos"]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 63.0
+offset_right = 279.0
+offset_bottom = 152.0
+theme_override_fonts/font = ExtResource("6_hk61s")
+theme_override_font_sizes/font_size = 10
+text = "Sorry for not doing all the game,
+ but I didn’t have much time,
+ you know, school is a pain with
+ exams and all. So I did what I could,
+ hope you like it. 
+Talk to me on Discord “EuBrabo48”."
+
+[node name="LinkButton" type="LinkButton" parent="creditos"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 135.0
+offset_right = 309.0
+offset_bottom = 175.0
+theme_override_fonts/font = ExtResource("6_hk61s")
+text = "GitHub"
+uri = "https://github.com/EuBraBo48"
+
+[connection signal="pressed" from="menu/new game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="menu/opctions" to="." method="_on_opctions_pressed"]
+[connection signal="pressed" from="menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="opcions/opcions/video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="opcions/opcions/Creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="opcions/BackFromOpctions" to="." method="_on_back_from_opctions_pressed"]
+[connection signal="toggled" from="video/video/checkBoxs/FullScreen" to="." method="_on_full_screen_toggled"]
+[connection signal="toggled" from="video/video/checkBoxs/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="pressed" from="video/BackFromVIdo" to="." method="_on_back_from_v_ido_pressed"]
+[connection signal="pressed" from="creditos/BackFromCreditos" to="." method="_on_back_from_creditos_pressed"]
