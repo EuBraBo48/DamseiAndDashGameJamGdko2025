@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://kgfp41fl4ib4"]
+
+[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_vlv2i"]
+[ext_resource type="Script" path="res://Scrips/mini_game_do_microondas_dahs.gd" id="1_ydkp6"]
+
+[node name="miniGameDoMicroondasDahs" type="Node2D" node_paths=PackedStringArray("title")]
+script = ExtResource("1_ydkp6")
+title = NodePath("Label")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(228, 134)
+texture = ExtResource("1_vlv2i")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(394, 141)
+texture = ExtResource("1_vlv2i")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(82, 132)
+texture = ExtResource("1_vlv2i")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
