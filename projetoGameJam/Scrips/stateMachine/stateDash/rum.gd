@@ -2,13 +2,14 @@ extends State
 class_name Rum
 
 func enter() -> void:
+	player.animation.play("Rum")
 	print("Entrou no rum")
 
 func exit() -> void:
 	pass
 
 func process(delta: float) -> void:
-	if not Input.is_action_pressed("cima") or not Input.is_action_pressed("baixo") or not Input.is_action_pressed("esqueda") or  not Input.is_action_pressed("direita"):
+	if not  Input.is_action_pressed("baixo") and not Input.is_action_pressed("cima") and not Input.is_action_pressed("esquerda") and not Input.is_action_pressed("direta") :
 		get_parent().tranziçao(self, "Ide")
 	
 

@@ -2,8 +2,9 @@ extends CharacterBody2D
 class_name  damsei
 
 var seepd: float = 60
-@export var sprite__player: Sprite2D 
+@onready var sprite__player: Sprite2D = $sprit
 @export var _state_machine: stateMachine 
+@export var animation: AnimationPlayer 
 
 
 
@@ -11,9 +12,10 @@ func _ready() -> void:
 	_state_machine.stateMacne(self)
 
 func _process(delta: float) -> void:
+	vercquitSprict()
 	move_and_slide()
 	movPlay()
-
+	
 
 func movPlay() -> void:
 	var input_vetc = Vector2(

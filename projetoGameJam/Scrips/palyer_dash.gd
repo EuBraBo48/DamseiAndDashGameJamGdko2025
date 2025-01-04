@@ -4,6 +4,8 @@ class_name  dash
 var seepd: float = 60
 @export var sprite__player: Sprite2D 
 @export var _state_machine: stateMachine 
+@onready var animation: AnimationPlayer = $Animation
+
 
 
 
@@ -11,8 +13,10 @@ func _ready() -> void:
 	_state_machine.stateMacne(self)
 
 func _process(delta: float) -> void:
+	vercquitSprict()
 	move_and_slide()
 	movPlay()
+	
 
 
 func movPlay() -> void:

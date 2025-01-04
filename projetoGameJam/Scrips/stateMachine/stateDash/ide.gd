@@ -3,6 +3,7 @@ class_name Ide
 
 
 func enter() -> void:
+	player.animation.play("Ide")
 	print("EntrouNoIde")
 
 func exit() -> void:

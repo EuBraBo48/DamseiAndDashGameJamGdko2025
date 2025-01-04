@@ -28,6 +28,7 @@ func tecla(letra) -> void:
 		
 	if 	trilha_1.progress_ratio == 1:
 		await get_tree().create_timer(0.1).timeout
+		get_tree().change_scene_to_file("res://Cenas/menu.tscn")
 		
 
 func _ready() -> void:

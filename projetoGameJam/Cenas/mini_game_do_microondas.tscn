@@ -1,46 +1,82 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmll8wn80xget"]
+[gd_scene load_steps=10 format=3 uid="uid://cmll8wn80xget"]
 
 [ext_resource type="Script" path="res://Scrips/mini_game_do_microondas.gd" id="1_0ot53"]
-[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_pt2bb"]
+[ext_resource type="Texture2D" uid="uid://bvw2h7gt5dch3" path="res://Spreites/taliMap/fundoDoMiniGamje.png" id="2_brqum"]
+[ext_resource type="Texture2D" uid="uid://duagrv5j6a4gx" path="res://Spreites/obejtos/microButaoNormal.png" id="2_jcgp2"]
+[ext_resource type="Texture2D" uid="uid://ie8wmlgc228" path="res://Spreites/obejtos/microButooPresende.png" id="3_mlvmj"]
+[ext_resource type="Texture2D" uid="uid://cubn40xua4a6" path="res://Spreites/hud/anteProgessoDaRotebat.png" id="4_5cw2r"]
+[ext_resource type="Texture2D" uid="uid://ca0e114tr5xyh" path="res://Spreites/hud/fundoDaRotebar.png" id="5_8piod"]
+[ext_resource type="Texture2D" uid="uid://daqoirlbcrt4p" path="res://Spreites/hud/progesooDaRotebar.png" id="6_jn6kq"]
+[ext_resource type="Script" path="res://Scrips/CameiraTremor.gd" id="8_kouoh"]
+[ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="9_oi0r3"]
 
 [node name="miniGameDoMicroondas" type="Control" node_paths=PackedStringArray("barraDevidaTextrura")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -1.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0ot53")
-barraDevidaTextrura = NodePath("barraDeVida")
+barraDevidaTextrura = NodePath("TextureProgressBar")
 
-[node name="fundo" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -8.0
-offset_top = 4.0
-offset_right = -8.0
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.027451, 1, 1)
-
-[node name="barraDeVida" type="ProgressBar" parent="."]
-layout_mode = 0
-offset_left = 189.0
-offset_top = 15.0
-offset_right = 277.0
-offset_bottom = 42.0
-value = 100.0
+[node name="FundoDoMiniGamje" type="Sprite2D" parent="."]
+position = Vector2(166.5, 72)
+scale = Vector2(3.49219, 2.23438)
+texture = ExtResource("2_brqum")
 
 [node name="butaoCliquer" type="TextureButton" parent="."]
 layout_mode = 0
-offset_left = 181.0
-offset_top = 60.0
-offset_right = 309.0
-offset_bottom = 188.0
-scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_pt2bb")
+offset_left = 107.0
+offset_top = 28.0
+offset_right = 235.0
+offset_bottom = 156.0
+texture_normal = ExtResource("2_jcgp2")
+texture_pressed = ExtResource("3_mlvmj")
+stretch_mode = 0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 12.0
+offset_right = 136.0
+offset_bottom = 15.0
+scale = Vector2(5, 5)
+max_value = 200.0
+value = 200.0
+texture_under = ExtResource("4_5cw2r")
+texture_over = ExtResource("5_8piod")
+texture_progress = ExtResource("6_jn6kq")
+
+[node name="Particles" type="CPUParticles2D" parent="."]
+position = Vector2(165, 70)
+emitting = false
+amount = 100
+one_shot = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 147.54
+initial_velocity_max = 147.54
+scale_amount_min = 2.0
+scale_amount_max = 3.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(178, 93)
+script = ExtResource("8_kouoh")
+
+[node name="Timer" type="Timer" parent="Camera2D"]
+
+[node name="titulo2" type="Label" parent="."]
+offset_left = 89.0
+offset_top = 160.0
+offset_right = 270.0
+offset_bottom = 180.0
+theme_override_fonts/font = ExtResource("9_oi0r3")
+text = "Destroy the microwave"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="butaoCliquer" to="." method="_on_texture_button_pressed"]
+[connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]

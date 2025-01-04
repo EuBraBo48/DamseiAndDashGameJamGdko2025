@@ -1,32 +1,344 @@
-[gd_scene load_steps=3 format=3 uid="uid://kgfp41fl4ib4"]
+[gd_scene load_steps=36 format=3 uid="uid://kgfp41fl4ib4"]
 
-[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_vlv2i"]
 [ext_resource type="Script" path="res://Scrips/mini_game_do_microondas_dahs.gd" id="1_ydkp6"]
+[ext_resource type="Texture2D" uid="uid://bf25jge0bgbvk" path="res://Spreites/obejtos/copo.png" id="2_0d34o"]
+[ext_resource type="Texture2D" uid="uid://bsxa3w1x5us7v" path="res://Spreites/taliMap/fundoDoMiniGamesDoCopo.png" id="3_lhhog"]
+[ext_resource type="Texture2D" uid="uid://ckxu2ttdm6h6v" path="res://Spreites/hud/quadradiDetextro.png" id="4_bg6uw"]
+[ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="5_se8f6"]
 
-[node name="miniGameDoMicroondasDahs" type="Node2D" node_paths=PackedStringArray("title")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lptib"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4xc6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s654e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ji414"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yw2c1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_abjo8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qtlnj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipp2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yosu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_28x57"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qulxa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qv3n4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3gbse"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ywn7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0xy3l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7o437"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_td7l2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdocn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6771f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_na4km"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tfoyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n3dsu"]
+
+[sub_resource type="Animation" id="Animation_y540b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("copos/copo3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(55, 148)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("copos/copo1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(181, 148)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("copos/copo2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(302, 147.5)]
+}
+
+[sub_resource type="Animation" id="Animation_ihfcq"]
+resource_name = "inic"
+length = 13.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("copos/copo3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.633333, 1.03333, 1.3, 2.13333, 2.63333, 3.03333, 3.33333, 3.76667, 4.8, 5.33333, 5.73333, 5.96667, 6.63333, 6.9, 7.26667, 7.66667, 7.93333, 8.76667, 9.26667, 9.66667, 9.96667, 10.4, 11.4333, 11.9667, 12.3667, 12.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(55, 148), Vector2(59, 106), Vector2(59, 66), Vector2(92, 53), Vector2(163, 34), Vector2(169, 48), Vector2(178, 86), Vector2(175, 134), Vector2(177, 147), Vector2(181, 149), Vector2(242, 149), Vector2(263, 151), Vector2(315, 148), Vector2(313, 148), Vector2(55, 148), Vector2(59, 106), Vector2(59, 66), Vector2(92, 53), Vector2(163, 34), Vector2(169, 48), Vector2(178, 86), Vector2(175, 134), Vector2(177, 147), Vector2(181, 149), Vector2(242, 149), Vector2(263, 151), Vector2(315, 148), Vector2(313, 148)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("copos/copo1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.6, 1.93333, 2.53333, 2.9, 3.76667, 8.23333, 8.56667, 9.16667, 9.53333, 10.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(144, 150), Vector2(126, 152), Vector2(110, 147), Vector2(50, 148), Vector2(53, 148), Vector2(144, 150), Vector2(126, 152), Vector2(110, 147), Vector2(50, 148), Vector2(53, 148)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("copos/copo2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3.76667, 4.06667, 4.36667, 4.8, 4.93333, 5.3, 5.7, 6.16667, 6.5, 10.4, 10.7, 11, 11.4333, 11.5667, 11.9333, 12.3333, 12.8, 13.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(302, 147.5), Vector2(301, 90), Vector2(252, 65), Vector2(196, 55), Vector2(190, 84), Vector2(184, 110), Vector2(178, 129), Vector2(180, 145), Vector2(188, 149), Vector2(302, 147.5), Vector2(301, 90), Vector2(252, 65), Vector2(196, 55), Vector2(190, 84), Vector2(184, 110), Vector2(178, 129), Vector2(180, 145), Vector2(188, 149)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ebsqv"]
+_data = {
+"RESET": SubResource("Animation_y540b"),
+"inic": SubResource("Animation_ihfcq")
+}
+
+[sub_resource type="Animation" id="Animation_ywv5o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("copos/copo3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(55, 148)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("copos/copo1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(181, 148)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("copos/copo2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(302, 147.5)]
+}
+
+[sub_resource type="Animation" id="Animation_hwvcw"]
+resource_name = "animC1"
+length = 1.6
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("copos/copo1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.11, 0.22, 1.32, 1.44, 1.59),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(53.04, 148), Vector2(54, 129), Vector2(56, 105), Vector2(56, 93), Vector2(52, 106), Vector2(53, 133), Vector2(52, 148)]
+}
+
+[sub_resource type="Animation" id="Animation_qju5d"]
+resource_name = "animC2"
+length = 1.6
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("copos/copo2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13, 0.33, 0.47, 0.59, 1.09, 1.17, 1.27, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(181, 150), Vector2(179, 137), Vector2(180, 121), Vector2(181, 107), Vector2(182, 93), Vector2(180, 99), Vector2(179, 122), Vector2(179, 138), Vector2(179, 148)]
+}
+
+[sub_resource type="Animation" id="Animation_owt0c"]
+resource_name = "animC3"
+length = 1.6
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("copos/copo3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.26, 0.48, 0.62, 1.39, 1.52, 1.56),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(310, 149), Vector2(311, 130), Vector2(312, 123), Vector2(315, 104), Vector2(315, 96), Vector2(312, 120), Vector2(310, 142), Vector2(311, 149)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_spj2m"]
+_data = {
+"RESET": SubResource("Animation_ywv5o"),
+"animC1": SubResource("Animation_hwvcw"),
+"animC2": SubResource("Animation_qju5d"),
+"animC3": SubResource("Animation_owt0c")
+}
+
+[node name="miniGameDoMicroondasDahs" type="Node2D" node_paths=PackedStringArray("title", "butao1", "butao2", "butao3")]
 script = ExtResource("1_ydkp6")
 title = NodePath("Label")
+butao1 = NodePath("copos/copo1/Button")
+butao2 = NodePath("copos/copo2/Button2")
+butao3 = NodePath("copos/copo3/Button3")
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(228, 134)
-texture = ExtResource("1_vlv2i")
+[node name="FundoDoMiniGamesDoCopo" type="Sprite2D" parent="."]
+position = Vector2(181, 92)
+scale = Vector2(2.84375, 1.4375)
+texture = ExtResource("3_lhhog")
 
-[node name="Icon2" type="Sprite2D" parent="."]
-position = Vector2(394, 141)
-texture = ExtResource("1_vlv2i")
+[node name="copos" type="Node" parent="."]
 
-[node name="Icon3" type="Sprite2D" parent="."]
-position = Vector2(82, 132)
-texture = ExtResource("1_vlv2i")
+[node name="copo1" type="Sprite2D" parent="copos"]
+position = Vector2(181, 148)
+scale = Vector2(4, 4)
+texture = ExtResource("2_0d34o")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="Button" type="Button" parent="copos/copo1"]
+offset_left = -5.25
+offset_top = -10.75
+offset_right = 3.75
+offset_bottom = 8.25
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lptib")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_m4xc6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_s654e")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ji414")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_yw2c1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_abjo8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_qtlnj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ipp2i")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yosu")
+flat = true
+
+[node name="copo2" type="Sprite2D" parent="copos"]
+position = Vector2(302, 147.5)
+scale = Vector2(4, 3.96875)
+texture = ExtResource("2_0d34o")
+
+[node name="Button2" type="Button" parent="copos/copo2"]
+offset_left = -6.0
+offset_top = -10.2047
+offset_right = 6.0
+offset_bottom = 5.79528
+theme_override_styles/focus = SubResource("StyleBoxEmpty_28x57")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_qulxa")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_qv3n4")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3gbse")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ywn7b")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_0xy3l")
+flat = true
+
+[node name="copo3" type="Sprite2D" parent="copos"]
+position = Vector2(55, 148)
+scale = Vector2(4, 4)
+texture = ExtResource("2_0d34o")
+
+[node name="Button3" type="Button" parent="copos/copo3"]
+offset_left = -5.0
+offset_top = -10.0
+offset_right = 4.0
+offset_bottom = 7.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7o437")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_td7l2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_cdocn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6771f")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_na4km")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tfoyq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_n3dsu")
+flat = true
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ebsqv")
+}
+autoplay = "inic"
+
+[node name="Animation2" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_spj2m")
+}
+
+[node name="QuadradiDetextro" type="Sprite2D" parent="."]
+position = Vector2(12, 13)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("4_bg6uw")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 17.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_se8f6")
+text = "0"
 
 [node name="Label2" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 110.0
+offset_top = 2.0
+offset_right = 235.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("5_se8f6")
+text = "Hit the Glasses"
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="copos/copo1/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="copos/copo2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="copos/copo3/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="animation_finished" from="Animation" to="." method="_on_animation_animation_finished"]

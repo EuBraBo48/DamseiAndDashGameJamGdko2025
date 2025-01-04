@@ -1,6 +1,6 @@
 extends TextureRect
 
-@export_enum("drop", "drop2") var powerup  = 0
+@export_enum("banana", "melasia", "maca") var powerup  = 0
 
 var v= false
 

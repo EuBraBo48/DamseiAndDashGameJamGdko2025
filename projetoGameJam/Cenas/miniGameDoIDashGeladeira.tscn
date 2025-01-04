@@ -1,56 +1,116 @@
-[gd_scene load_steps=5 format=3 uid="uid://76tv5iy83y3o"]
+[gd_scene load_steps=12 format=3 uid="uid://76tv5iy83y3o"]
 
-[ext_resource type="Texture2D" uid="uid://cofjrga25u0gh" path="res://icon.svg" id="1_uuhap"]
+[ext_resource type="Texture2D" uid="uid://dmjchtrkyr6w3" path="res://Spreites/obejtos/MiniGameDaGeladeira.png" id="1_5yek5"]
+[ext_resource type="Texture2D" uid="uid://cuyh41bagkc3v" path="res://Spreites/taliMap/fundoDoMinigameGeladeira.png" id="1_k0emj"]
 [ext_resource type="Script" path="res://Scrips/draggable.gd" id="2_gcj3r"]
 [ext_resource type="Script" path="res://Scrips/slot.gd" id="3_y5n4v"]
+[ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="5_wwwm2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tsx1h"]
-atlas = ExtResource("1_uuhap")
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcsyl"]
+atlas = ExtResource("1_5yek5")
+region = Rect2(0, 8, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bt0v"]
+atlas = ExtResource("1_5yek5")
+region = Rect2(0, 64, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3owr"]
+atlas = ExtResource("1_5yek5")
+region = Rect2(0, 128, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqo1n"]
+atlas = ExtResource("1_5yek5")
+region = Rect2(64, 8, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxtan"]
+atlas = ExtResource("1_5yek5")
+region = Rect2(64, 64, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atarm"]
+atlas = ExtResource("1_5yek5")
+region = Rect2(64, 128, 24, 24)
 
 [node name="miniGameDoIDashGeladeira" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="drop" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
-scale = Vector2(0.8, 0.8)
-texture = SubResource("AtlasTexture_tsx1h")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(181, 89.5)
+scale = Vector2(2.82812, 1.42969)
+texture = ExtResource("1_k0emj")
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 20.0
+offset_right = -179.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+
+[node name="banana" type="TextureRect" parent="BoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_mcsyl")
 script = ExtResource("2_gcj3r")
 
-[node name="slot" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 339.0
-offset_top = 14.0
-offset_right = 467.0
-offset_bottom = 142.0
-scale = Vector2(0.9, 0.9)
-texture = SubResource("AtlasTexture_tsx1h")
-script = ExtResource("3_y5n4v")
-
-[node name="drop2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -5.0
-offset_top = 124.0
-offset_right = 123.0
-offset_bottom = 252.0
-scale = Vector2(0.8, 0.8)
-texture = SubResource("AtlasTexture_tsx1h")
+[node name="melasia" type="TextureRect" parent="BoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_7bt0v")
 script = ExtResource("2_gcj3r")
 powerup = 1
 
-[node name="slot2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 334.0
-offset_top = 138.0
-offset_right = 462.0
-offset_bottom = 266.0
-scale = Vector2(0.9, 0.9)
-texture = SubResource("AtlasTexture_tsx1h")
+[node name="maça" type="TextureRect" parent="BoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_w3owr")
+script = ExtResource("2_gcj3r")
+powerup = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="BoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+
+[node name="slot" type="TextureRect" parent="BoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_vqo1n")
+script = ExtResource("3_y5n4v")
+
+[node name="slot2" type="TextureRect" parent="BoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_jxtan")
 script = ExtResource("3_y5n4v")
 powerup = 1
+
+[node name="slot3" type="TextureRect" parent="BoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+texture = SubResource("AtlasTexture_atarm")
+script = ExtResource("3_y5n4v")
+powerup = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 1.0
+offset_right = 236.0
+offset_bottom = 24.0
+theme_override_fonts/font = ExtResource("5_wwwm2")
+text = "Fit things right"
