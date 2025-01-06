@@ -15,7 +15,9 @@ func _on_texture_button_pressed() -> void:
 	
 func _process(delta: float) -> void:
 	if barraDevidaTextrura.value <= 0:
-		get_tree().change_scene_to_file("res://Cenas/menu.tscn")
+		Gobla.infor = "go to your brother"
+		get_tree().paused = false
+		get_tree().change_scene_to_file("res://Cenas/casa_pricipal.tscn")
 		Input.set_custom_mouse_cursor(null)
 	
 func _ready() -> void:

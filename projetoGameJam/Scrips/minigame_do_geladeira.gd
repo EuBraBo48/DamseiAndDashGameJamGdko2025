@@ -28,7 +28,9 @@ func tecla(letra) -> void:
 		
 	if 	trilha_1.progress_ratio == 1:
 		await get_tree().create_timer(0.1).timeout
-		get_tree().change_scene_to_file("res://Cenas/menu.tscn")
+		get_tree().paused = false
+		Gobla.infor = "go to your brother"
+		get_tree().change_scene_to_file("res://Cenas/casa_pricipal.tscn")
 		
 
 func _ready() -> void:

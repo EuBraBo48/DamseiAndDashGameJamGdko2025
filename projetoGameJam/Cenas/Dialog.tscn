@@ -1,12 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmp4ipmvwxwct"]
+[gd_scene load_steps=5 format=3 uid="uid://dmp4ipmvwxwct"]
 
 [ext_resource type="Script" path="res://Scrips/dialog.gd" id="1_gjo5y"]
-[ext_resource type="Texture2D" uid="uid://bs76nu0h7o4ai" path="res://Spreites/hud/caixaDeDialogosNova.png" id="2_0e3yx"]
-[ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="3_hb8jk"]
+[ext_resource type="Texture2D" uid="uid://dxxu8xkng50c4" path="res://Spreites/hud/CaixaDeDialogo_1.png" id="2_gesko"]
 [ext_resource type="FontFile" uid="uid://byeucmyge7xj7" path="res://fontes/MatchupPro.otf" id="3_jq6uk"]
-[ext_resource type="Texture2D" uid="uid://d0k4okyu2lpuw" path="res://Spreites/icones/iconeDamsei.png" id="4_138qg"]
+[ext_resource type="Texture2D" uid="uid://cnqfhrixhsp6p" path="res://Spreites/icones/descomnhecido.png" id="5_8ahfw"]
 
 [node name="Dialog" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_icone")]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,12 +25,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.334122, 0.334122, 0.334122, 1)
+color = Color(0.333333, 0.333333, 0.333333, 0.74902)
 
 [node name="caixaDeDialogos" type="Sprite2D" parent="."]
 position = Vector2(163, 117)
-scale = Vector2(10, 10)
-texture = ExtResource("2_0e3yx")
+scale = Vector2(2, 2)
+texture = ExtResource("2_gesko")
 metadata/_edit_lock_ = true
 
 [node name="name" type="Label" parent="."]
@@ -40,16 +40,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -147.0
-offset_top = -43.0
-offset_right = -97.0
-offset_bottom = -21.0
+offset_left = -157.0
+offset_top = 3.0
+offset_right = -107.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0.730216, 0.730216, 0.730216, 1)
-theme_override_fonts/font = ExtResource("3_hb8jk")
-theme_override_font_sizes/font_size = 14
+theme_override_colors/font_shadow_color = Color(0.125911, 0.125911, 0.125911, 1)
+theme_override_fonts/font = ExtResource("3_jq6uk")
 text = "damsei"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -61,10 +59,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -13.0
-offset_right = 98.0
-offset_bottom = 53.0
+offset_left = -92.0
+offset_top = 4.0
+offset_right = 126.0
+offset_bottom = 49.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
@@ -78,11 +76,11 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 50.0
-offset_top = -73.0
-offset_right = 114.0
-offset_bottom = -9.0
+offset_left = -165.0
+offset_top = 6.0
+offset_right = -103.0
+offset_bottom = 61.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_138qg")
-flip_h = true
+texture = ExtResource("5_8ahfw")
+expand_mode = 1

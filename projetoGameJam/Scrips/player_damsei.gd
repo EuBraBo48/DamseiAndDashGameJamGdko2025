@@ -8,6 +8,7 @@ var seepd: float = 60
 
 
 
+
 func _ready() -> void:
 	_state_machine.stateMacne(self)
 
@@ -30,3 +31,7 @@ func vercquitSprict() -> void:
 		sprite__player.flip_h = false
 	elif velocity.x < 0:
 		sprite__player.flip_h = true
+
+
+func _on_timer_timeout() -> void:
+	pass # Replace with function body.

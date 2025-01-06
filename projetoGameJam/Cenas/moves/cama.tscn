@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmjx22wht47su"]
+
+[ext_resource type="Texture2D" uid="uid://b0m4ptaxw35w3" path="res://Spreites/taliMap/InteriorTilesLITE.png" id="1_uqmah"]
+[ext_resource type="Script" path="res://Scrips/moves/cama.gd" id="1_y328i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fy8ae"]
+size = Vector2(32, 42.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tksk3"]
+radius = 32.0156
+
+[node name="cama" type="RigidBody2D"]
+collision_mask = 2
+gravity_scale = 0.0
+script = ExtResource("1_y328i")
+
+[node name="InteriorTilesLite" type="Sprite2D" parent="."]
+texture = ExtResource("1_uqmah")
+region_enabled = true
+region_rect = Rect2(160, 264, 32, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.75)
+shape = SubResource("RectangleShape2D_fy8ae")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_tksk3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

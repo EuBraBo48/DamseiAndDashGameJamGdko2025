@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="9_oi0r3"]
 
 [node name="miniGameDoMicroondas" type="Control" node_paths=PackedStringArray("barraDevidaTextrura")]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,6 +70,7 @@ script = ExtResource("8_kouoh")
 [node name="Timer" type="Timer" parent="Camera2D"]
 
 [node name="titulo2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 89.0
 offset_top = 160.0
 offset_right = 270.0

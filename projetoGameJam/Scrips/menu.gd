@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 func taggle() -> void:
 	visible = !visible
 	get_tree().paused = visible
+	show_and_hide(opcions,menu)
+	
 
 
 func show_and_hide(first, second ) -> void:
@@ -68,4 +70,4 @@ func _on_borderless_toggled(toggled_on: bool) -> void:
 
 func _on_new_game_pressed() -> void:
 	show_and_hide(opcions,menu)
-	#get_tree().change_scene_to_file("res://EuBraBo/Scenes/cassa_do_player.tscn")
+	get_tree().change_scene_to_file("res://Cenas/casa_pricipal.tscn")
