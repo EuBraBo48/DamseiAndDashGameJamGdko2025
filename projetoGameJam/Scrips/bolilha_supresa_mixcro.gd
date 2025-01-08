@@ -1,5 +1,6 @@
 extends Sprite2D
 
+@onready var bg_msuic_2: AudioStreamPlayer2D = $bg_msuic2
 
 
 func _ready() -> void:
@@ -13,10 +14,14 @@ func _ready() -> void:
 func _on_button_pressed() -> void:
 	if position == Vector2(53,148):
 		get_parent().animation_2.play("animC1")
+		bg_msuic_2.play()
+		
 	elif  position == Vector2(181, 132):
 		get_parent().animation_2.play("animC2")
+		bg_msuic_2.play()
 	elif  position == Vector2(310,141):
 		get_parent().animation_2.play("animC3")
+		bg_msuic_2.play()
 	
 	get_parent().infor += 1
 	await get_tree().create_timer(1.6).timeout

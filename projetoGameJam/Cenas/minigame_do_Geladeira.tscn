@@ -1,10 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://dxfell7k53lml"]
+[gd_scene load_steps=16 format=3 uid="uid://dxfell7k53lml"]
 
 [ext_resource type="Script" path="res://Scrips/minigame_do_geladeira.gd" id="1_wwslk"]
 [ext_resource type="Texture2D" uid="uid://bdyfd18bgxk8a" path="res://Spreites/icones/iconeDamseiFrutaas.png" id="2_gs27d"]
 [ext_resource type="Texture2D" uid="uid://c8nwu0m0sui5" path="res://Spreites/taliMap/External.jpg" id="2_pplmp"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="3_qy2og"]
 [ext_resource type="Texture2D" uid="uid://ckxu2ttdm6h6v" path="res://Spreites/hud/quadradiDetextro.png" id="4_bskem"]
+[ext_resource type="AudioStream" uid="uid://tsngasbrpysb" path="res://SweetSounds_SFX/WAV/Low_Health.wav" id="6_2p8fw"]
+[ext_resource type="AudioStream" uid="uid://djcs50us56y5e" path="res://Cofye.wav" id="6_n20ce"]
+[ext_resource type="AudioStream" uid="uid://yxxnlguksuww" path="res://SweetSounds_SFX/WAV/Confirm.wav" id="7_eewpf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pighl"]
 load_path = "res://.godot/imported/ObjetosMapa.png-d2c6a7b18070f5acf50288bbbad1a104.ctex"
@@ -123,3 +126,14 @@ libraries = {
 "": SubResource("AnimationLibrary_575xn")
 }
 autoplay = "ide"
+
+[node name="bg_msuic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2p8fw")
+autoplay = true
+
+[node name="bg_msuic2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_eewpf")
+
+[node name="bg_msuic3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_n20ce")
+autoplay = true

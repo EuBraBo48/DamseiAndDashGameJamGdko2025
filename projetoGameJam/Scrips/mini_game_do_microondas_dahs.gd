@@ -7,6 +7,7 @@ const BOLILHA_SUPRESA_MIXCRO = preload("res://Cenas/bolilha_supresa_mixcro.tscn"
 
 @export var title:Label
 var infor := 0
+@onready var bg_msuic_2: AudioStreamPlayer2D = $bg_msuic2
 
 @export var butao1: Button
 @export var butao2: Button
@@ -37,12 +38,14 @@ func _on_animation_animation_finished(anim_name: StringName) -> void:
 func _on_button_pressed() -> void:
 	animation_2.play("animC1")
 	$Label2.text = "I think I'm not there"
+	bg_msuic_2.play()
 	await  get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Cenas/mini_game_do_microondas_dahs.tscn")
 
 func _on_button_2_pressed() -> void:
 	animation_2.play("animC2")
 	$Label2.text = "I think I'm not there"
+	bg_msuic_2.play()
 	await  get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Cenas/mini_game_do_microondas_dahs.tscn")
 	
@@ -50,5 +53,6 @@ func _on_button_2_pressed() -> void:
 func _on_button_3_pressed() -> void:
 	animation_2.play("animC3")
 	$Label2.text = "I think I'm not there"
+	bg_msuic_2.play()
 	await  get_tree().create_timer(3).timeout
 	get_tree().change_scene_to_file("res://Cenas/mini_game_do_microondas_dahs.tscn")

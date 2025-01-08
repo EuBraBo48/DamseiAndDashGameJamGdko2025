@@ -1,10 +1,12 @@
-[gd_scene load_steps=36 format=3 uid="uid://kgfp41fl4ib4"]
+[gd_scene load_steps=38 format=3 uid="uid://kgfp41fl4ib4"]
 
 [ext_resource type="Script" path="res://Scrips/mini_game_do_microondas_dahs.gd" id="1_ydkp6"]
 [ext_resource type="Texture2D" uid="uid://bf25jge0bgbvk" path="res://Spreites/obejtos/copo.png" id="2_0d34o"]
 [ext_resource type="Texture2D" uid="uid://bsxa3w1x5us7v" path="res://Spreites/taliMap/fundoDoMiniGamesDoCopo.png" id="3_lhhog"]
 [ext_resource type="Texture2D" uid="uid://ckxu2ttdm6h6v" path="res://Spreites/hud/quadradiDetextro.png" id="4_bg6uw"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="5_se8f6"]
+[ext_resource type="AudioStream" uid="uid://be2bfnnwpa2w2" path="res://RTro.wav" id="6_u783q"]
+[ext_resource type="AudioStream" uid="uid://b51d8ilgnp5rj" path="res://SweetSounds_SFX/WAV/Click.wav" id="7_ugw4n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lptib"]
 
@@ -338,6 +340,14 @@ offset_right = 235.0
 offset_bottom = 25.0
 theme_override_fonts/font = ExtResource("5_se8f6")
 text = "Hit the Glasses"
+
+[node name="bg_msuic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_u783q")
+autoplay = true
+
+[node name="bg_msuic2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ugw4n")
+autoplay = true
 
 [connection signal="pressed" from="copos/copo1/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="copos/copo2/Button2" to="." method="_on_button_2_pressed"]

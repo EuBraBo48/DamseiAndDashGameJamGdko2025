@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://d1mufd65g8gl3"]
+[gd_scene load_steps=31 format=4 uid="uid://d1mufd65g8gl3"]
 
 [ext_resource type="Texture2D" uid="uid://ct7lde6xcij0n" path="res://Spreites/taliMap/taliMapDacasaNormal.png" id="1_nbeys"]
 [ext_resource type="Texture2D" uid="uid://cpe0n8dvdva3r" path="res://Spreites/taliMap/FIM.png" id="2_hyxun"]
@@ -15,8 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://bu6jmg0wwbpra" path="res://Cenas/hud.tscn" id="13_4vuke"]
 [ext_resource type="PackedScene" uid="uid://xe278cxgf8oe" path="res://Cenas/troca_de_irmao.tscn" id="14_i00dh"]
 [ext_resource type="PackedScene" uid="uid://dllar88mbeg6w" path="res://Cenas/menu.tscn" id="15_k65ut"]
+[ext_resource type="AudioStream" uid="uid://8270ul36fmm5" path="res://CenePricipal.wav" id="16_ug2bp"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2gu06"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ic5mn"]
 texture = ExtResource("1_nbeys")
 0:0/0 = 0
 1:0/0 = 0
@@ -31,7 +32,7 @@ texture = ExtResource("1_nbeys")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o2w6f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dt85r"]
 texture = ExtResource("2_hyxun")
 0:0/0 = 0
 1:0/0 = 0
@@ -49,10 +50,10 @@ texture = ExtResource("2_hyxun")
 
 [sub_resource type="TileSet" id="TileSet_pelwu"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_2gu06")
-sources/1 = SubResource("TileSetAtlasSource_o2w6f")
+sources/0 = SubResource("TileSetAtlasSource_ic5mn")
+sources/1 = SubResource("TileSetAtlasSource_dt85r")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_huvrx"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uxju"]
 texture = ExtResource("3_m0iyu")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -252,9 +253,9 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_qbj0o"]
 tile_size = Vector2i(32, 32)
-sources/0 = SubResource("TileSetAtlasSource_huvrx")
+sources/0 = SubResource("TileSetAtlasSource_7uxju")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eedmr"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_od7hc"]
 texture = ExtResource("1_nbeys")
 0:0/0 = 0
 1:0/0 = 0
@@ -274,7 +275,7 @@ texture = ExtResource("1_nbeys")
 2:2/0 = 0
 3:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cblor"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_43fll"]
 texture = ExtResource("4_vrefq")
 0:0/0 = 0
 1:0/0 = 0
@@ -290,10 +291,10 @@ texture = ExtResource("4_vrefq")
 
 [sub_resource type="TileSet" id="TileSet_dqjte"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_eedmr")
-sources/2 = SubResource("TileSetAtlasSource_cblor")
+sources/0 = SubResource("TileSetAtlasSource_od7hc")
+sources/2 = SubResource("TileSetAtlasSource_43fll")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ktthu"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_160u0"]
 texture = ExtResource("3_m0iyu")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
@@ -503,7 +504,7 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_18nf3"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ktthu")
+sources/0 = SubResource("TileSetAtlasSource_160u0")
 
 [sub_resource type="Animation" id="Animation_u7bks"]
 length = 0.001
@@ -671,7 +672,7 @@ hud = NodePath("CanvasLayer")
 [node name="CanvasLayer" type="CanvasLayer" parent="dialog"]
 
 [node name="PlayerDamsei" parent="." instance=ExtResource("12_16t78")]
-position = Vector2(297, 287)
+position = Vector2(395, 70)
 
 [node name="hud" parent="." instance=ExtResource("13_4vuke")]
 
@@ -701,5 +702,9 @@ libraries = {
 
 [node name="Menu" parent="CanvasLayer" instance=ExtResource("15_k65ut")]
 visible = false
+
+[node name="bg_msuic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("16_ug2bp")
+autoplay = true
 
 [connection signal="animation_finished" from="AnimationPlayer" to="taliMap/obejtos/cama2" method="_on_animation_player_animation_finished"]

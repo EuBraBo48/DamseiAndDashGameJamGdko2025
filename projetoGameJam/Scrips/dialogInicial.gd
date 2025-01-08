@@ -115,10 +115,10 @@ func _ready() -> void:
 		newDialog._data = QuietMorning
 		hud.add_child(newDialog)
 		Gobla.verd = false
-		#
-	#if Gobla.dia == 2 and Gobla.verd == true:
-		#get_tree().paused = true
-		#var newDialog: DialogScreen = _DIALOG_SCREEEN.instantiate()
-		#newDialog._data = NewDay
-		#hud.add_child(newDialog)
-		#Gobla.verd = false
+		
+	if Gobla.dia == 2 and Gobla.verd == true:
+		get_tree().paused = true
+		var newDialog: DialogScreen = _DIALOG_SCREEEN.instantiate()
+		newDialog._data = NewDay
+		hud.add_child(newDialog)
+		Gobla.verd = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmll8wn80xget"]
+[gd_scene load_steps=13 format=3 uid="uid://cmll8wn80xget"]
 
 [ext_resource type="Script" path="res://Scrips/mini_game_do_microondas.gd" id="1_0ot53"]
 [ext_resource type="Texture2D" uid="uid://bvw2h7gt5dch3" path="res://Spreites/taliMap/fundoDoMiniGamje.png" id="2_brqum"]
@@ -9,6 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://daqoirlbcrt4p" path="res://Spreites/hud/progesooDaRotebar.png" id="6_jn6kq"]
 [ext_resource type="Script" path="res://Scrips/CameiraTremor.gd" id="8_kouoh"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="9_oi0r3"]
+[ext_resource type="AudioStream" uid="uid://djcs50us56y5e" path="res://Cofye.wav" id="10_jtnac"]
+[ext_resource type="AudioStream" uid="uid://yxxnlguksuww" path="res://SweetSounds_SFX/WAV/Confirm.wav" id="11_w0bul"]
+[ext_resource type="AudioStream" uid="uid://b51d8ilgnp5rj" path="res://SweetSounds_SFX/WAV/Click.wav" id="12_7rsif"]
 
 [node name="miniGameDoMicroondas" type="Control" node_paths=PackedStringArray("barraDevidaTextrura")]
 process_mode = 3
@@ -79,6 +82,18 @@ theme_override_fonts/font = ExtResource("9_oi0r3")
 text = "Destroy the microwave"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="bg_msuic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_jtnac")
+autoplay = true
+
+[node name="bg_msuic2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_w0bul")
+autoplay = true
+
+[node name="bg_msuic3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_7rsif")
+autoplay = true
 
 [connection signal="pressed" from="butaoCliquer" to="." method="_on_texture_button_pressed"]
 [connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]

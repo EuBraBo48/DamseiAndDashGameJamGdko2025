@@ -3,8 +3,9 @@ class_name minigameDaGeladeira
 
 @export var trilha_1: PathFollow2D 
 @export var titulo: Label 
+@onready var bg_msuic_2: AudioStreamPlayer2D = $bg_msuic2
 
-
+@onready var bg_msuic: AudioStreamPlayer2D = $bg_msuic
 var letraAleatoria: String = ""
 var letrasSotiadas: Array =  ["a", "b", "c", "d", "e", "f", "g"]
 var texto:String = ""
@@ -22,12 +23,14 @@ func _input(event: InputEvent) -> void:
 func tecla(letra) -> void:
 	if letra == letraAleatoria:
 		trilha_1.progress_ratio += 0.024
+		bg_msuic.play()
 		letraAleatoria = letrasSotiadas.pick_random()
 		titulo.text = (letraAleatoria.to_upper())
 		await get_tree().create_timer(1).timeout
 		
 	if 	trilha_1.progress_ratio == 1:
-		await get_tree().create_timer(0.1).timeout
+		bg_msuic_2.play()
+		await get_tree().create_timer(1).timeout
 		get_tree().paused = false
 		Gobla.infor = "go to your brother"
 		get_tree().change_scene_to_file("res://Cenas/casa_pricipal.tscn")

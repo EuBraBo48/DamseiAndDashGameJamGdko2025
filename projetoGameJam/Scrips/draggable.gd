@@ -2,7 +2,7 @@ extends TextureRect
 
 @export_enum("banana", "melasia", "maca")
 var powerup = 0
-
+@onready var bg_msuic_2: AudioStreamPlayer2D = $"../../../../bg_msuic2"
 var Passarefase:= 0 
 
 
@@ -24,11 +24,13 @@ func _get_drag_data(at_position: Vector2) -> Variant:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_DRAG_END:
 		visible = true
-		Passarefase += 1
+		
 
 
 func _process(delta: float) -> void:
 	if Passarefase == 3:
 		Gobla.infor = "go to bed"
 		get_tree().paused = false
+		bg_msuic_2.play()
+		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Cenas/casa_pricipal.tscn")

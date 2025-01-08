@@ -21,6 +21,7 @@ var TheBed: Dictionary = {
 	}
 }
 
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var taNacama: float = false
 const _DIALOG_SCREEEN: PackedScene = preload("res://Cenas/Dialog.tscn")
@@ -71,5 +72,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		Gobla.infor = "Go to microwave"
 		Gobla.Nom = "Damsei"
 		get_tree().paused = false
+		audio_stream_player_2d.play()
+		await get_tree().create_timer(2.51).timeout
 		get_tree().change_scene_to_file("res://Cenas/casa_pricipal.tscn")
 	

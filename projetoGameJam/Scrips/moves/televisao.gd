@@ -19,6 +19,8 @@ var TheTelevision: Dictionary = {
 		"icone": "res://Spreites/icones/iconeDash.png"
 	}
 }
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
 
 var taNaTeleviao: float = false
 const _DIALOG_SCREEEN: PackedScene = preload("res://Cenas/Dialog.tscn")
