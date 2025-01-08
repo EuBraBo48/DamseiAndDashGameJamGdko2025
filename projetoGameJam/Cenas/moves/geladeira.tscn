@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyyhtc1o7q2uw"]
+
+[ext_resource type="Script" path="res://Scrips/moves/geladeira.gd" id="1_qk5xa"]
+[ext_resource type="Texture2D" uid="uid://b0m4ptaxw35w3" path="res://Spreites/taliMap/InteriorTilesLITE.png" id="1_qo7a4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6tp7"]
+size = Vector2(27, 40)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h7yyq"]
+radius = 18.0
+height = 50.0
+
+[node name="geladeira" type="RigidBody2D"]
+collision_mask = 2
+gravity_scale = 0.0
+script = ExtResource("1_qk5xa")
+
+[node name="InteriorTilesLite" type="Sprite2D" parent="."]
+texture = ExtResource("1_qo7a4")
+region_enabled = true
+region_rect = Rect2(128, 192, 32, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_t6tp7")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_h7yyq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

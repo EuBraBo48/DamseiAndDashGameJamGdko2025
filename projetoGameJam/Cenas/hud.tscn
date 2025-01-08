@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu6jmg0wwbpra"]
+
+[ext_resource type="Script" path="res://Scrips/hud.gd" id="1_flrte"]
+[ext_resource type="Texture2D" uid="uid://bhxrj604s03tw" path="res://Spreites/icones/iconeDash.png" id="1_qutut"]
+[ext_resource type="FontFile" uid="uid://byeucmyge7xj7" path="res://fontes/MatchupPro.otf" id="2_dm202"]
+[ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="3_xyv01"]
+[ext_resource type="Texture2D" uid="uid://c6x5r8lqueuti" path="res://Spreites/hud/horarioDia.png" id="4_cpb1j"]
+
+[node name="hud" type="Control" node_paths=PackedStringArray("infor_mision", "_name", "icone", "numddi")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_flrte")
+infor_mision = NodePath("CanvasLayer/InforMision")
+_name = NodePath("CanvasLayer/name")
+icone = NodePath("CanvasLayer/icone")
+numddi = NodePath("CanvasLayer/numddi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="InforMision" type="Label" parent="CanvasLayer"]
+offset_left = 6.0
+offset_top = 35.0
+offset_right = 61.0
+offset_bottom = 58.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_dm202")
+text = "mission:"
+
+[node name="name" type="Label" parent="CanvasLayer"]
+offset_left = 42.0
+offset_top = 10.0
+offset_right = 97.0
+offset_bottom = 33.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_xyv01")
+text = "dash"
+
+[node name="HorarioDia" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(336, 7)
+texture = ExtResource("4_cpb1j")
+
+[node name="dia" type="Label" parent="CanvasLayer"]
+offset_left = 337.0
+offset_top = -2.0
+offset_right = 368.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0, 0.0666667, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("2_dm202")
+text = "dia"
+
+[node name="numddi" type="Label" parent="CanvasLayer"]
+offset_left = 314.0
+offset_top = -2.0
+offset_right = 331.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.905882, 0.905882, 0.243137, 1)
+theme_override_fonts/font = ExtResource("2_dm202")
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="icone" type="TextureRect" parent="CanvasLayer"]
+offset_left = -16.0
+offset_top = -17.0
+offset_right = 48.0
+offset_bottom = 47.0
+texture = ExtResource("1_qutut")
+metadata/_edit_lock_ = true
