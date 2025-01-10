@@ -38,6 +38,8 @@ Will Dash survive Damsei's chaos? Play the demo now and find out!
 - 📺 [Canal no YouTube](https://youtube.com/@eu_bra_bo48?si=h4WUFMhvNAi4vQlM)
 - 📸 [Instagram](https://www.instagram.com/univesalng?igsh=OHVndTdiY25lcDRi)
 - 🌐 [Canal UniversalNg](https://www.youtube.com/@UniversalNg)
+- 🎮 [Jogo no Itch.io](https://inscricoes.funcern.org/e/ifpe-ingresso-2025-1/)
+
 
 ---
 ### Thanks!
