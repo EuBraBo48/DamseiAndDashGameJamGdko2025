@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cgrvyxiw5x16y"]
 
 [ext_resource type="Texture2D" uid="uid://ctxcp1rxm1ge" path="res://Spreites/obejtos/porta.png" id="1_18o5e"]
-[ext_resource type="Script" path="res://Scrips/moves/porta.gd" id="1_70gda"]
+[ext_resource type="Script" uid="uid://b6h0mxjah2e56" path="res://Scrips/moves/porta.gd" id="1_70gda"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtcis"]
 size = Vector2(20, 28)

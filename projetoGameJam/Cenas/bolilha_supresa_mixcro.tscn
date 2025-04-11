@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://cq7rpd5gv4tam"]
 
 [ext_resource type="Texture2D" uid="uid://bxhlkyte1fmdu" path="res://Spreites/obejtos/bolinhaSupresa.png" id="1_n4hhk"]
-[ext_resource type="Script" path="res://Scrips/bolilha_supresa_mixcro.gd" id="2_mp1ys"]
+[ext_resource type="Script" uid="uid://1hs8074rvxcq" path="res://Scrips/bolilha_supresa_mixcro.gd" id="2_mp1ys"]
 [ext_resource type="AudioStream" uid="uid://b51d8ilgnp5rj" path="res://SweetSounds_SFX/WAV/Click.wav" id="3_kohsr"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ym62o"]

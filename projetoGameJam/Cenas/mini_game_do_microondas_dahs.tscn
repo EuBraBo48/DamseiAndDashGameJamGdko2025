@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=3 uid="uid://kgfp41fl4ib4"]
 
-[ext_resource type="Script" path="res://Scrips/mini_game_do_microondas_dahs.gd" id="1_ydkp6"]
+[ext_resource type="Script" uid="uid://dgdi0e7m4o75q" path="res://Scrips/mini_game_do_microondas_dahs.gd" id="1_ydkp6"]
 [ext_resource type="Texture2D" uid="uid://bf25jge0bgbvk" path="res://Spreites/obejtos/copo.png" id="2_0d34o"]
 [ext_resource type="Texture2D" uid="uid://bsxa3w1x5us7v" path="res://Spreites/taliMap/fundoDoMiniGamesDoCopo.png" id="3_lhhog"]
 [ext_resource type="Texture2D" uid="uid://ckxu2ttdm6h6v" path="res://Spreites/hud/quadradiDetextro.png" id="4_bg6uw"]
@@ -134,8 +134,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ebsqv"]
 _data = {
-"RESET": SubResource("Animation_y540b"),
-"inic": SubResource("Animation_ihfcq")
+&"RESET": SubResource("Animation_y540b"),
+&"inic": SubResource("Animation_ihfcq")
 }
 
 [sub_resource type="Animation" id="Animation_ywv5o"]
@@ -230,10 +230,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_spj2m"]
 _data = {
-"RESET": SubResource("Animation_ywv5o"),
-"animC1": SubResource("Animation_hwvcw"),
-"animC2": SubResource("Animation_qju5d"),
-"animC3": SubResource("Animation_owt0c")
+&"RESET": SubResource("Animation_ywv5o"),
+&"animC1": SubResource("Animation_hwvcw"),
+&"animC2": SubResource("Animation_qju5d"),
+&"animC3": SubResource("Animation_owt0c")
 }
 
 [node name="miniGameDoMicroondasDahs" type="Node2D" node_paths=PackedStringArray("title", "butao1", "butao2", "butao3")]

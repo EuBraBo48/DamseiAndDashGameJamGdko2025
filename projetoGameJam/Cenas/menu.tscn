@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=4 uid="uid://dllar88mbeg6w"]
 
-[ext_resource type="Script" path="res://Scrips/menu.gd" id="1_j61kg"]
+[ext_resource type="Script" uid="uid://0pabkm7r6wpi" path="res://Scrips/menu.gd" id="1_j61kg"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="2_48ppe"]
 [ext_resource type="Theme" uid="uid://dn8l6hwxgmgx8" path="res://temapaFont.tres" id="2_kgjr4"]
 [ext_resource type="Texture2D" uid="uid://ct7lde6xcij0n" path="res://Spreites/taliMap/taliMapDacasaNormal.png" id="2_vgqsx"]

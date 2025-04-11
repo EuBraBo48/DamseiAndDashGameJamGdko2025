@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bu6jmg0wwbpra"]
 
-[ext_resource type="Script" path="res://Scrips/hud.gd" id="1_flrte"]
+[ext_resource type="Script" uid="uid://bdd6kmjlq3fy" path="res://Scrips/hud.gd" id="1_flrte"]
 [ext_resource type="Texture2D" uid="uid://bhxrj604s03tw" path="res://Spreites/icones/iconeDash.png" id="1_qutut"]
 [ext_resource type="FontFile" uid="uid://byeucmyge7xj7" path="res://fontes/MatchupPro.otf" id="2_dm202"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="3_xyv01"]

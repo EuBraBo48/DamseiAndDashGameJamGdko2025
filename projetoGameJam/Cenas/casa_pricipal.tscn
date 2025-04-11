@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bmjx22wht47su" path="res://Cenas/moves/cama.tscn" id="8_f166c"]
 [ext_resource type="PackedScene" uid="uid://cgrvyxiw5x16y" path="res://Cenas/moves/porta.tscn" id="10_kcm1j"]
 [ext_resource type="PackedScene" uid="uid://b8oq5oio1eqkm" path="res://Cenas/player_damsei.tscn" id="12_16t78"]
-[ext_resource type="Script" path="res://Scrips/dialogInicial.gd" id="12_mwqtx"]
+[ext_resource type="Script" uid="uid://c71mttiuausl" path="res://Scrips/dialogInicial.gd" id="12_mwqtx"]
 [ext_resource type="PackedScene" uid="uid://bu6jmg0wwbpra" path="res://Cenas/hud.tscn" id="13_4vuke"]
 [ext_resource type="PackedScene" uid="uid://xe278cxgf8oe" path="res://Cenas/troca_de_irmao.tscn" id="14_i00dh"]
 [ext_resource type="PackedScene" uid="uid://dllar88mbeg6w" path="res://Cenas/menu.tscn" id="15_k65ut"]
@@ -591,9 +591,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_l10f0"]
 _data = {
-"RESET": SubResource("Animation_u7bks"),
-"dormin": SubResource("Animation_cy0ey"),
-"dormin_2": SubResource("Animation_svilf")
+&"RESET": SubResource("Animation_u7bks"),
+&"dormin": SubResource("Animation_cy0ey"),
+&"dormin_2": SubResource("Animation_svilf")
 }
 
 [node name="CasaPricipal" type="Node2D"]

@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://bwxah6gx8jsq3"]
 
-[ext_resource type="Script" path="res://Scrips/palyer_dash.gd" id="1_8imaq"]
+[ext_resource type="Script" uid="uid://c8ay0v58pbu4x" path="res://Scrips/palyer_dash.gd" id="1_8imaq"]
 [ext_resource type="Texture2D" uid="uid://dbahffcm0iykk" path="res://Spreites/Personages/BonecoTemplate_5.png" id="2_1dtyc"]
 [ext_resource type="Texture2D" uid="uid://b1vutem8nhyb5" path="res://Spreites/Personages/BonecoTemplate_9.png" id="3_lmukb"]
-[ext_resource type="Script" path="res://Scrips/stateMachine/StateMachine.gd" id="3_r8k0t"]
-[ext_resource type="Script" path="res://Scrips/stateMachine/stateDash/ide.gd" id="4_fc45i"]
-[ext_resource type="Script" path="res://Scrips/stateMachine/stateDash/rum.gd" id="5_xkyyf"]
-[ext_resource type="Script" path="res://Scrips/stateMachine/stateDash/interagindo.gd" id="6_f2060"]
+[ext_resource type="Script" uid="uid://dt8n7g2l3bs7e" path="res://Scrips/stateMachine/StateMachine.gd" id="3_r8k0t"]
+[ext_resource type="Script" uid="uid://c5iwdbld6iwds" path="res://Scrips/stateMachine/stateDash/ide.gd" id="4_fc45i"]
+[ext_resource type="Script" uid="uid://krw5oqoruayd" path="res://Scrips/stateMachine/stateDash/rum.gd" id="5_xkyyf"]
+[ext_resource type="Script" uid="uid://cp10l766elqat" path="res://Scrips/stateMachine/stateDash/interagindo.gd" id="6_f2060"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_so50l"]
 size = Vector2(15, 7)
@@ -169,9 +169,9 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vgpaf"]
 _data = {
-"Ide": SubResource("Animation_clk5q"),
-"RESET": SubResource("Animation_hwh35"),
-"Rum": SubResource("Animation_addaf")
+&"Ide": SubResource("Animation_clk5q"),
+&"RESET": SubResource("Animation_hwh35"),
+&"Rum": SubResource("Animation_addaf")
 }
 
 [node name="palyerDash" type="CharacterBody2D" node_paths=PackedStringArray("sprite__player", "_state_machine") groups=["player"]]

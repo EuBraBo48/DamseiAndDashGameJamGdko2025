@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyyhtc1o7q2uw"]
 
-[ext_resource type="Script" path="res://Scrips/moves/geladeira.gd" id="1_qk5xa"]
+[ext_resource type="Script" uid="uid://dsqyri6lrc4u5" path="res://Scrips/moves/geladeira.gd" id="1_qk5xa"]
 [ext_resource type="Texture2D" uid="uid://b0m4ptaxw35w3" path="res://Spreites/taliMap/InteriorTilesLITE.png" id="1_qo7a4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6tp7"]

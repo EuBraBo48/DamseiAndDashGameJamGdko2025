@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dumactf320mub"]
 
 [ext_resource type="Texture2D" uid="uid://duagrv5j6a4gx" path="res://Spreites/obejtos/microButaoNormal.png" id="1_7wepq"]
-[ext_resource type="Script" path="res://Scrips/moves/microondas.gd" id="1_cnamn"]
+[ext_resource type="Script" uid="uid://cd0erpvsj6fde" path="res://Scrips/moves/microondas.gd" id="1_cnamn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrtvx"]
 size = Vector2(20, 13)

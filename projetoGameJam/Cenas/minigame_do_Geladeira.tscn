@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=3 uid="uid://dxfell7k53lml"]
 
-[ext_resource type="Script" path="res://Scrips/minigame_do_geladeira.gd" id="1_wwslk"]
+[ext_resource type="Script" uid="uid://ftc55c1bag5t" path="res://Scrips/minigame_do_geladeira.gd" id="1_wwslk"]
 [ext_resource type="Texture2D" uid="uid://bdyfd18bgxk8a" path="res://Spreites/icones/iconeDamseiFrutaas.png" id="2_gs27d"]
 [ext_resource type="Texture2D" uid="uid://c8nwu0m0sui5" path="res://Spreites/taliMap/External.jpg" id="2_pplmp"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="3_qy2og"]
@@ -59,8 +59,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_575xn"]
 _data = {
-"RESET": SubResource("Animation_1s87d"),
-"ide": SubResource("Animation_png0l")
+&"RESET": SubResource("Animation_1s87d"),
+&"ide": SubResource("Animation_png0l")
 }
 
 [node name="MinigameDaGeladeira" type="Node2D" node_paths=PackedStringArray("trilha_1", "titulo")]

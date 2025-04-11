@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0eju1dpicsr0"]
 
-[ext_resource type="Script" path="res://Scrips/moves/televisao.gd" id="1_7d512"]
+[ext_resource type="Script" uid="uid://d1rlivhlxa3r6" path="res://Scrips/moves/televisao.gd" id="1_7d512"]
 [ext_resource type="Texture2D" uid="uid://b0m4ptaxw35w3" path="res://Spreites/taliMap/InteriorTilesLITE.png" id="1_8vhea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gqch"]

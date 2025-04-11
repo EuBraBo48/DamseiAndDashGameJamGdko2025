@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://xe278cxgf8oe"]
 
 [ext_resource type="Texture2D" uid="uid://dbahffcm0iykk" path="res://Spreites/Personages/BonecoTemplate_5.png" id="1_16uax"]
-[ext_resource type="Script" path="res://Scrips/troca_de_irmao.gd" id="1_ae4lh"]
+[ext_resource type="Script" uid="uid://dji62fy0nbu37" path="res://Scrips/troca_de_irmao.gd" id="1_ae4lh"]
 [ext_resource type="Texture2D" uid="uid://bjoi4h0esybyc" path="res://Spreites/Personages/BonecoTemplate_13.png" id="2_gbdmm"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4csaw"]

@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dmjchtrkyr6w3" path="res://Spreites/obejtos/MiniGameDaGeladeira.png" id="1_5yek5"]
 [ext_resource type="Texture2D" uid="uid://cuyh41bagkc3v" path="res://Spreites/taliMap/fundoDoMinigameGeladeira.png" id="1_k0emj"]
-[ext_resource type="Script" path="res://Scrips/draggable.gd" id="2_gcj3r"]
-[ext_resource type="Script" path="res://Scrips/slot.gd" id="3_y5n4v"]
+[ext_resource type="Script" uid="uid://blnngxfi65eb2" path="res://Scrips/draggable.gd" id="2_gcj3r"]
+[ext_resource type="Script" uid="uid://buwchmpqwnt2f" path="res://Scrips/slot.gd" id="3_y5n4v"]
 [ext_resource type="FontFile" uid="uid://cbujd168217xg" path="res://fontes/Minecraft.ttf" id="5_wwwm2"]
 [ext_resource type="AudioStream" uid="uid://djcs50us56y5e" path="res://Cofye.wav" id="7_8gmiu"]
 [ext_resource type="AudioStream" uid="uid://yxxnlguksuww" path="res://SweetSounds_SFX/WAV/Confirm.wav" id="7_82q6o"]

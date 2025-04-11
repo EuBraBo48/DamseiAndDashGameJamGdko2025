@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://kru8f0ghbo8u"]
 
-[ext_resource type="Script" path="res://Scrips/fim.gd" id="1_ki8o8"]
+[ext_resource type="Script" uid="uid://bsxjtskwtosuy" path="res://Scrips/fim.gd" id="1_ki8o8"]
 [ext_resource type="Texture2D" uid="uid://bkum0vyafhbn3" path="res://Spreites/bixoDoMal.png" id="1_y66fn"]
 [ext_resource type="Texture2D" uid="uid://c7y7pw3v1ppg1" path="res://Spreites/fIwM.png" id="2_wjdmm"]
 [ext_resource type="Texture2D" uid="uid://bxgew8p1yhlb3" path="res://Spreites/Silemsieo.png" id="3_jqxpb"]
@@ -87,8 +87,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kjkvq"]
 _data = {
-"RESET": SubResource("Animation_8dy7h"),
-"ini": SubResource("Animation_owfll")
+&"RESET": SubResource("Animation_8dy7h"),
+&"ini": SubResource("Animation_owfll")
 }
 
 [node name="fim" type="Node2D" node_paths=PackedStringArray("hud")]

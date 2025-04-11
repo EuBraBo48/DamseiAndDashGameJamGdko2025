@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0jc34oetmj2y"]
 
-[ext_resource type="Script" path="res://Scrips/moves/forgao.gd" id="1_3vith"]
+[ext_resource type="Script" uid="uid://dm0qyn5286fa2" path="res://Scrips/moves/forgao.gd" id="1_3vith"]
 [ext_resource type="Texture2D" uid="uid://b0m4ptaxw35w3" path="res://Spreites/taliMap/InteriorTilesLITE.png" id="1_pgtmk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1etpo"]
