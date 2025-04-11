@@ -1,0 +1,133 @@
+[gd_scene load_steps=9 format=3 uid="uid://kru8f0ghbo8u"]
+
+[ext_resource type="Script" path="res://Scrips/fim.gd" id="1_ki8o8"]
+[ext_resource type="Texture2D" uid="uid://bkum0vyafhbn3" path="res://Spreites/bixoDoMal.png" id="1_y66fn"]
+[ext_resource type="Texture2D" uid="uid://c7y7pw3v1ppg1" path="res://Spreites/fIwM.png" id="2_wjdmm"]
+[ext_resource type="Texture2D" uid="uid://bxgew8p1yhlb3" path="res://Spreites/Silemsieo.png" id="3_jqxpb"]
+[ext_resource type="AudioStream" uid="uid://cqgaijxms6v55" path="res://SweetSounds_SFX/WAV/Room Of Doom.wav" id="5_1t240"]
+
+[sub_resource type="Animation" id="Animation_8dy7h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BixoDoMal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Silemsieo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FIwM:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_owfll"]
+resource_name = "ini"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BixoDoMal:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 4.06667),
+"transitions": PackedFloat32Array(1, 3.24901, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Silemsieo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4.96667, 6.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FIwM:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 8.56667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kjkvq"]
+_data = {
+"RESET": SubResource("Animation_8dy7h"),
+"ini": SubResource("Animation_owfll")
+}
+
+[node name="fim" type="Node2D" node_paths=PackedStringArray("hud")]
+script = ExtResource("1_ki8o8")
+hud = NodePath("hud")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 364.0
+offset_bottom = 186.0
+color = Color(0.0749248, 5.95317e-06, 0.0763104, 1)
+
+[node name="BixoDoMal" type="Sprite2D" parent="."]
+position = Vector2(177, 91)
+scale = Vector2(1.77344, 1.41407)
+texture = ExtResource("1_y66fn")
+
+[node name="FIwM" type="Sprite2D" parent="."]
+z_index = 3
+y_sort_enabled = true
+position = Vector2(180, 91)
+scale = Vector2(2.8125, 2.2625)
+texture = ExtResource("2_wjdmm")
+
+[node name="Silemsieo" type="Sprite2D" parent="."]
+position = Vector2(181, 91.75)
+scale = Vector2(2.80469, 2.23125)
+texture = ExtResource("3_jqxpb")
+
+[node name="hud" type="CanvasLayer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kjkvq")
+}
+autoplay = "ini"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_1t240")
+volume_db = -9.008
+autoplay = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -1,0 +1,220 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwxah6gx8jsq3"]
+
+[ext_resource type="Script" path="res://Scrips/palyer_dash.gd" id="1_8imaq"]
+[ext_resource type="Texture2D" uid="uid://dbahffcm0iykk" path="res://Spreites/Personages/BonecoTemplate_5.png" id="2_1dtyc"]
+[ext_resource type="Texture2D" uid="uid://b1vutem8nhyb5" path="res://Spreites/Personages/BonecoTemplate_9.png" id="3_lmukb"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/StateMachine.gd" id="3_r8k0t"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/stateDash/ide.gd" id="4_fc45i"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/stateDash/rum.gd" id="5_xkyyf"]
+[ext_resource type="Script" path="res://Scrips/stateMachine/stateDash/interagindo.gd" id="6_f2060"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_so50l"]
+size = Vector2(15, 7)
+
+[sub_resource type="Animation" id="Animation_clk5q"]
+resource_name = "Ide"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.466667, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1dtyc")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_hwh35"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_1dtyc")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:vframes")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_addaf"]
+resource_name = "Rum"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_lmukb")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgpaf"]
+_data = {
+"Ide": SubResource("Animation_clk5q"),
+"RESET": SubResource("Animation_hwh35"),
+"Rum": SubResource("Animation_addaf")
+}
+
+[node name="palyerDash" type="CharacterBody2D" node_paths=PackedStringArray("sprite__player", "_state_machine") groups=["player"]]
+z_index = 3
+y_sort_enabled = true
+collision_layer = 2
+script = ExtResource("1_8imaq")
+sprite__player = NodePath("player")
+_state_machine = NodePath("StateMachine")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 15.5)
+shape = SubResource("RectangleShape2D_so50l")
+
+[node name="player" type="Sprite2D" parent="."]
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_1dtyc")
+hframes = 3
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vgpaf")
+}
+autoplay = "Ide"
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("stateInicial")]
+script = ExtResource("3_r8k0t")
+stateInicial = NodePath("Ide")
+
+[node name="Ide" type="Node" parent="StateMachine"]
+script = ExtResource("4_fc45i")
+
+[node name="rum" type="Node" parent="StateMachine"]
+script = ExtResource("5_xkyyf")
+
+[node name="interagindo" type="Node" parent="StateMachine"]
+script = ExtResource("6_f2060")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.2, 1.2)
+limit_left = -40
+limit_top = -20
+limit_right = 660
+limit_bottom = 400
+editor_draw_limits = true
+editor_draw_drag_margin = true

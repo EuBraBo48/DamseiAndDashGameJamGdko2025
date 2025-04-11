@@ -1,0 +1,86 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmp4ipmvwxwct"]
+
+[ext_resource type="Script" path="res://Scrips/dialog.gd" id="1_gjo5y"]
+[ext_resource type="Texture2D" uid="uid://dxxu8xkng50c4" path="res://Spreites/hud/CaixaDeDialogo_1.png" id="2_gesko"]
+[ext_resource type="FontFile" uid="uid://byeucmyge7xj7" path="res://fontes/MatchupPro.otf" id="3_jq6uk"]
+[ext_resource type="Texture2D" uid="uid://cnqfhrixhsp6p" path="res://Spreites/icones/descomnhecido.png" id="5_8ahfw"]
+
+[node name="Dialog" type="Control" node_paths=PackedStringArray("_name", "_dialog", "_icone")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gjo5y")
+_name = NodePath("name")
+_dialog = NodePath("Dialog")
+_icone = NodePath("icone")
+
+[node name="brackGraude" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.333333, 0.333333, 0.333333, 0.74902)
+
+[node name="caixaDeDialogos" type="Sprite2D" parent="."]
+position = Vector2(163, 117)
+scale = Vector2(2, 2)
+texture = ExtResource("2_gesko")
+metadata/_edit_lock_ = true
+
+[node name="name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -157.0
+offset_top = 3.0
+offset_right = -107.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.125911, 0.125911, 0.125911, 1)
+theme_override_fonts/font = ExtResource("3_jq6uk")
+text = "damsei"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dialog" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = 4.0
+offset_right = 126.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_jq6uk")
+text = "sdsdsdsdsdsdsddsdddddddddddddddddsssddddddddddsssssssýyrt rgggdddddddddddddjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj"
+
+[node name="icone" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = 6.0
+offset_right = -103.0
+offset_bottom = 61.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_8ahfw")
+expand_mode = 1
